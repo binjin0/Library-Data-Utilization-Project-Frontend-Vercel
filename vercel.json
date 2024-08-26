@@ -6,7 +6,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "http://openapi.seoul.go.kr:8088/api키/json/SeoulPublicLibraryInfo/$1"
+      "destination": "http://openapi.seoul.go.kr:8088/:path*"
     }
   ]
 }
