@@ -5,8 +5,8 @@
   ],
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "https://openapi.seoul.go.kr:8088/67437856786130333937507575794c/json/SeoulPublicLibraryInfo/1/1000/"
+      "source": "/api/:path*",
+      "destination": "http://openapi.seoul.go.kr:8088/:path*"
     }
   ]
 }
