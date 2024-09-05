@@ -34,7 +34,7 @@ const Maps = ({ updateButtonText, setSelectedLibrary }) => {
       try {
         const res = await fetch("/api/library");
         const data = await res.json();
-        // const data = await fetchLibraries();
+
         setLibraries(data.SeoulPublicLibraryInfo.row);
       } catch (error) {
         console.error("Error loading libraries:", error);
