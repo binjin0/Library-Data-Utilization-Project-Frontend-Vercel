@@ -2,7 +2,9 @@
 const BASE_URL = import.meta.env.VITE_LIBRARY_API_URL;
 export default async function handler(req, res) {
   try {
-    const response = await fetch(`${BASE_URL}`);
+    const response = await fetch(
+      "http://openapi.seoul.go.kr:8088/5345774a62613033383047496e7270/json/SeoulPublicLibraryInfo/1/1000/"
+    );
 
     if (!response.ok) {
       throw new Error("Network response was not ok");
