@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = import.meta.env.VITE_LIBRARY_API_URL;
+const BASE_URL = import.meta.env.VITE_LIBRARY_URL;
 // export const fetchLibraries = async () => {
 //   try {
 //     const response = await axios.get(`${BASE_URL}`);
