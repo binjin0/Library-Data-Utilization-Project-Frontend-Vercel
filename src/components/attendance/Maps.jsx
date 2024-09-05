@@ -32,9 +32,9 @@ const Maps = ({ updateButtonText, setSelectedLibrary }) => {
   useEffect(() => {
     const loadLibraries = async () => {
       try {
-        const res = await fetch("/api/library");
-        const data = await res.json();
-
+        // const res = await fetch("/api/library");
+        // const data = await res.json();
+        const data = await fetchLibraries();
         setLibraries(data.SeoulPublicLibraryInfo.row);
       } catch (error) {
         console.error("Error loading libraries:", error);
