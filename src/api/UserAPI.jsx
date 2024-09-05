@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = import.meta.env.VITE_API_URL;
+const BASE_URL = import.meta.env.VITE_API_URL2;
 //user 정보 post api
 export const PostUser = async (userData, navigate, setSignIn) => {
   try {
