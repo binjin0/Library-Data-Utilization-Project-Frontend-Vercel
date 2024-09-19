@@ -1,16 +1,17 @@
 // import axios from "axios";
-// const BASE_URL = import.meta.env.VITE_LIBRARY_API_URL;
+// const BASE_URL = import.meta.env.VITE_POPULAR_BOOK_API_URL;
+
 export default async function handler(req, res) {
   try {
     const response = await fetch(
-      "http://openapi.seoul.go.kr:8088/5345774a62613033383047496e7270/json/SeoulPublicLibraryInfo/1/1000/"
+      "https://data4library.kr/api/loanItemSrch?authKey=08777d5a7c571952f5b7149a562aef34bdcc936ef17dd630a7d8cbf4e1f14bc1&startDt=2024-01-01&endDt=2024-08-19&format=json"
     );
 
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
 
-    const data = await response.json(); // 응답을 JSON으로 변환dd
+    const data = await response.json(); // 응답을 JSON으로 변환
     res.status(200).json(data); // 데이터를 클라이언트로 반환
   } catch (error) {
     res
